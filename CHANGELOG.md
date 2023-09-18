@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "swift-json-decode" extension will be documented in this file.
+All notable changes to the "swift-csv-decode" extension will be documented in this file.
 
 ## [Unreleased]
 
