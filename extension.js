@@ -128,7 +128,7 @@ class CsvParser {
 
 		let types = [];
 		for(let column of this.columns) {
-			let isOptinal = false;
+			let isOptional = false;
 			let type = "";
 			for(let i=1;i<column.length;i++) {
 				let value = column[i].trim().toLowerCase();
@@ -147,9 +147,9 @@ class CsvParser {
 						type = "String"
 					}
 				}else if(value === ""){
-					isOptinal = true;
+					isOptional = true;
 				}else if(value === "null"){
-					isOptinal = true;
+					isOptional = true;
 				}else if(INT_REGEX.test(value)){
 					if(type === ""){
 						type = "Int";
@@ -167,7 +167,7 @@ class CsvParser {
 				}
 			}
 
-			if(isOptinal) {
+			if(isOptional) {
 				type += "?";
 			}
 
